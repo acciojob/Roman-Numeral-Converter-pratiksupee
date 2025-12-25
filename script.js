@@ -13,22 +13,10 @@ function convertToRoman(num) {
 
   let res = "";
 
-  const values = [
-    ['CM', 900], ['CD', 400],
-    ['XC', 90], ['XL', 40],
-    ['IX', 9], ['IV', 4]
-  ];
-
-  for (let i = 0; i < values.length; i++) {
-    while (num >= values[i][1]) {
-      res += values[i][0];
-      num -= values[i][1];
-    }
-  }
-
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i <= 6; i++) {
     let symbol = obj[i][0];
     let value = obj[i][1];
+
     while (num >= value) {
       res += symbol;
       num -= value;
